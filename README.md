@@ -1,5 +1,15 @@
 # Retail Modern Data Warehouse & Analytics Engineering
 
+<p align="left">
+  <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/dbt_Core-1.8.7-FF694B?style=for-the-badge&logo=dbt&logoColor=white" alt="dbt" />
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Docker-Engine-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Ubuntu_24.04-WSL2-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" />
+  <img src="https://img.shields.io/badge/Git-VCS-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License" />
+</p>
+
 Pipeline ponta a ponta de Analytics Engineering e Modern Data Warehouse implementado com PostgreSQL em container Docker, Python para ingestão ELT sintética e `dbt-core` para modelagem dimensional, governança e testes automatizados.
 
 ---
