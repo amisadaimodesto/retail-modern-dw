@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+# Garante o carregamento do ambiente virtual a partir da raiz do projeto
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$PROJECT_DIR"
+
+if [ -f ".venv/bin/activate" ]; then
+    source .venv/bin/activate
+fi
+
 echo "=========================================="
 echo " [1/5] INICIANDO INGESTAO NA CAMADA RAW   "
 echo "=========================================="
