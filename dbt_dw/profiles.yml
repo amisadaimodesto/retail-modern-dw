@@ -1,0 +1,13 @@
+retail_dw_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: dw_admin
+      password: dw_secure_password123
+      port: 5432
+      dbname: retail_dw
+      schema: staging
+      threads: 4
+      keepalives_idle: 0

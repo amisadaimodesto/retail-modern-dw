@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    description: "Dimensao de clientes com Surrogate Key MD5"
+    columns:
+      - name: sk_cliente
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_lojas
+    description: "Dimensao de lojas e hierarquia regional"
+    columns:
+      - name: sk_loja
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_produtos
+    description: "Dimensao de produtos e margem teorica"
+    columns:
+      - name: sk_produto
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_calendario
+    description: "Dimensao temporal padronizada"
+    columns:
+      - name: id_tempo
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fato_vendas
+    description: "Fato de vendas com metricas financeiras calculadas"
+    columns:
+      - name: sk_venda
+        data_tests:
+          - unique
+          - not_null
+      - name: sk_loja
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_lojas')
+              field: sk_loja
+      - name: sk_cliente
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_clientes')
+              field: sk_cliente
+      - name: sk_produto
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_produtos')
+              field: sk_produto
+      - name: status_pagamento
+        data_tests:
+          - accepted_values:
+              values: ['APROVADO', 'CANCELADO']

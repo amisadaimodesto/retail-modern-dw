@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw
+    database: retail_dw
+    schema: raw
+    description: "Tabelas brutas de operacoes de varejo geradas pelo pipeline ELT"
+    tables:
+      - name: clientes
+        description: "Cadastro de clientes"
+        columns:
+          - name: id_cliente
+            tests:
+              - unique
+              - not_null
+      - name: lojas
+        description: "Cadastro de filiais"
+        columns:
+          - name: id_loja
+            tests:
+              - unique
+              - not_null
+      - name: produtos
+        description: "Catalogo de itens e custos operacionais"
+        columns:
+          - name: id_produto
+            tests:
+              - unique
+              - not_null
+      - name: vendas
+        description: "Transacoes brutas de venda (contem registros duplicados intencionais)"

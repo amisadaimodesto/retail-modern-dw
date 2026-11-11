@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+dbt_dw/target/
+dbt_dw/dbt_packages/
+dbt_dw/logs/
+pgdata_retail_dw/
+.DS_Store
