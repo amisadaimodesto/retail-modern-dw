@@ -36,7 +36,7 @@ A arquitetura segue o paradigma ELT estruturado em schemas isolados no PostgreSQ
 ### 1. Clonar o repositório e ativar o ambiente virtual
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/amisadaimodesto/retail-modern-dw
 cd retail-modern-dw
 python3 -m venv .venv
 source .venv/bin/activate
